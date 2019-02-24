@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://walogia.ml">
-  <title>Archives: 2019 | 小熊的窝</title>
+  <title>PE 顶点表情合并 原理分析 | 小熊的窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小熊的窝">
-<meta property="og:url" content="https://walogia.ml/archives/2019/index.html">
+  <meta name="description" content="病危患者 的专栏  【PE教程】奥义 • 一键换脸  中有一步，设计到顶点表情合并，我原本想写个一键换脸插件的，看到这一步的时候，就崩溃了。 下面我来分析一下顶点表情  “合并“  的原理   材质复制，并关联复制出顶点表情 材质复制，实际上是面的复制（顶点数会增加，感谢emil的教导）  整容前  整容后 我们来看一下，表情这里  合并あ 和 あ+ 合并！！！！！！！  全都是假的 合并！！！！">
+<meta name="keywords" content="PE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PE 顶点表情合并 原理分析">
+<meta property="og:url" content="https://walogia.ml/2019/03/02/PE 顶点表情合并 原理分析/index.html">
 <meta property="og:site_name" content="小熊的窝">
+<meta property="og:description" content="病危患者 的专栏  【PE教程】奥义 • 一键换脸  中有一步，设计到顶点表情合并，我原本想写个一键换脸插件的，看到这一步的时候，就崩溃了。 下面我来分析一下顶点表情  “合并“  的原理   材质复制，并关联复制出顶点表情 材质复制，实际上是面的复制（顶点数会增加，感谢emil的教导）  整容前  整容后 我们来看一下，表情这里  合并あ 和 あ+ 合并！！！！！！！  全都是假的 合并！！！！">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/477355fe5d1990c4bd9bd708329a27d8f3c15535.png@1320w_532h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/a38e5d82a05c335c912b34272cec31b051aa36c6.png@492w_232h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/cfbd81de63b1549cec88046778272a003e06e3ea.png@484w_238h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/aaab383c7e0f9c36cbb12996b3866df59c0e8571.png@1320w_440h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/4adb9255ada5b97061e610b682b8636764fe50ed.png">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/c13514af6400b0dc5621ba0c015250ff0f108f97.jpg@1320w_480h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/ee05c873160066ff6f6b412894b86204d00a4e8b.png@1320w_148h.webp">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/56b9a77d1ab610ece1ffa5f9d2dce7e0025e4b20.png@1320w_124h.webp">
+<meta property="og:updated_time" content="2019-02-24T10:17:23.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小熊的窝">
+<meta name="twitter:title" content="PE 顶点表情合并 原理分析">
+<meta name="twitter:description" content="病危患者 的专栏  【PE教程】奥义 • 一键换脸  中有一步，设计到顶点表情合并，我原本想写个一键换脸插件的，看到这一步的时候，就崩溃了。 下面我来分析一下顶点表情  “合并“  的原理   材质复制，并关联复制出顶点表情 材质复制，实际上是面的复制（顶点数会增加，感谢emil的教导）  整容前  整容后 我们来看一下，表情这里  合并あ 和 あ+ 合并！！！！！！！  全都是假的 合并！！！！">
+<meta name="twitter:image" content="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png">
   
     <link rel="alternative" href="/atom.xml" title="小熊的窝" type="application/atom+xml">
   
@@ -153,183 +168,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-PE 顶点表情合并 原理分析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/搭建个人博客的几种方法/" class="archive-article-date">
-  	<time datetime="2019-03-09T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/搭建个人博客的几种方法/">搭建个人博客的几种方法</a>
+    <h1 class="article-title" itemprop="name">
+      PE 顶点表情合并 原理分析
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/08/酷我音乐MP3链获取方法/" class="archive-article-date">
-  	<time datetime="2019-03-08T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/08/酷我音乐MP3链获取方法/">酷我音乐MP3链获取方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/03/几个深度学习项目/" class="archive-article-date">
-  	<time datetime="2019-03-03T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/03/几个深度学习项目/">几个深度学习项目</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/PE 顶点表情合并 原理分析/" class="archive-article-date">
+		
+        
+        <a href="/2019/03/02/PE 顶点表情合并 原理分析/" class="archive-article-date">
   	<time datetime="2019-03-02T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/PE 顶点表情合并 原理分析/">PE 顶点表情合并 原理分析</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>病危患者 的专栏  <a href="https://www.bilibili.com/read/cv730434" target="_blank" rel="noopener">【PE教程】奥义 • 一键换脸</a> </p>
+<p>中有一步，设计到顶点表情合并，我原本想写个一键换脸插件的，看到这一步的时候，就崩溃了。</p>
+<p>下面我来分析一下顶点表情  <strong>“合并“  </strong>的原理</p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<p><img src="https://i0.hdslb.com/bfs/article/477355fe5d1990c4bd9bd708329a27d8f3c15535.png@1320w_532h.webp" alt></p>
+<p>材质复制，并关联复制出顶点表情</p>
+<p>材质复制，实际上是面的复制（顶点数会增加，感谢emil的教导）</p>
+<p><img src="https://i0.hdslb.com/bfs/article/a38e5d82a05c335c912b34272cec31b051aa36c6.png@492w_232h.webp" alt></p>
+<p>整容前</p>
+<p><img src="https://i0.hdslb.com/bfs/article/cfbd81de63b1549cec88046778272a003e06e3ea.png@484w_238h.webp" alt></p>
+<p>整容后</p>
+<p>我们来看一下，表情这里</p>
+<p><img src="https://i0.hdslb.com/bfs/article/aaab383c7e0f9c36cbb12996b3866df59c0e8571.png@1320w_440h.webp" alt></p>
+<p>合并あ 和 あ+</p>
+<p>合并！！！！！！！  全都是假的</p>
+<p>合并！！！！！！！  全都是假的</p>
+<p>合并！！！！！！！  全都是假的     （凑字数，嘿嘿嘿~~~）</p>
+<p><img src="https://i0.hdslb.com/bfs/article/4adb9255ada5b97061e610b682b8636764fe50ed.png" alt></p>
+<p>保存为CSV表格，分析一下，合并前后有何不同</p>
+<p>重点！！！！敲黑板！！！！</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c13514af6400b0dc5621ba0c015250ff0f108f97.jpg@1320w_480h.webp" alt></p>
+<p>左为没合并的あ2和 あ2+<br>右为合并后的あ</p>
+<p>我们来看看875,876行</p>
+<p><img src="https://i0.hdslb.com/bfs/article/ee05c873160066ff6f6b412894b86204d00a4e8b.png@1320w_148h.webp" alt></p>
+<p>左图875,876行为あ2+的表头</p>
+<p>我们看看表格的末尾</p>
+<p><img src="https://i0.hdslb.com/bfs/article/56b9a77d1ab610ece1ffa5f9d2dce7e0025e4b20.png@1320w_124h.webp" alt></p>
+<p>嗯！右边少了2行！！！！</p>
+<p>综上分析，表情合并，并不是顶点的合并，顶点数不会减少</p>
+<p>只是一种假象</p>
+<p>实际上，在csv表格的层面上，是删掉了875,876这两行，把876之后的 あ+重命名为あ</p>
+<p>以上</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -341,7 +271,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -354,93 +284,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://walogia.ml/2019/03/02/PE 顶点表情合并 原理分析/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/01/via/" class="archive-article-date">
-  	<time datetime="2019-03-01T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/03/03/几个深度学习项目/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          几个深度学习项目
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/01/via/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Via浏览器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/01/via/">Via浏览器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">via</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/安卓//" class="article-tag-list-link color3">安卓</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-02-24T04:09:40.047Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/24/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -478,8 +428,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

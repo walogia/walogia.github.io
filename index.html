@@ -157,6 +157,569 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-搭建个人博客的几种方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/09/搭建个人博客的几种方法/">搭建个人博客的几种方法</a>
+    </h1>
+  
+
+		
+        
+        <a href="/2019/03/09/搭建个人博客的几种方法/" class="archive-article-date">
+  	<time datetime="2019-03-09T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用-Jekyll"><a href="#使用-Jekyll" class="headerlink" title="使用 Jekyll"></a><strong>使用 Jekyll</strong></h1><p>Jekyll在windows下配置环境贼麻烦，好在多年前就有人做了便携版（没想到吧）</p>
+<p><a href="https://github.com/madhur/PortableJekyll" target="_blank" rel="noopener">https://github.com/madhur/PortableJekyll</a></p>
+<p>这个便携版，体积很大，解压后占用约2G</p>
+<p>解压后运行目录下的 <code>setpath.cmd</code> ，里面只有一句，配置了一下环境变量。由于在 CMD 下对环境变量的修改只对 <strong>当前窗口</strong> 有效</p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<h1 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h1><ol>
+<li><p>这一步就简单了，打开 cmd，定位到你要建立博客的目录，建立一个名叫 <code>myblog</code> 的博客，敲入如下命令：</p>
+<p>jekyll new myblog</p>
+<p>cd myblog</p>
+<p>jekyll serve</p>
+</li>
+<li><p>这时你的博客已经建立好了，并且在本地开启了一个服务器，可以通过 <code>localhost:4000</code> 进行访问。</p>
+<h1 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h1></li>
+<li><p>直接定位到博客目录下的 <code>_posts</code> 目录，可以看到一个以 <code>.markdown</code> 结尾的文件，这就是一篇文章。</p>
+</li>
+<li><p>写好一篇文章后以 <code>年-月-日-主题名.markdown</code> 的格式命名，不要有中文，等待下一步进行网站的生成。</p>
+<h1 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h1></li>
+<li><p>打开 cmd ，定位到当前博客的根目录，运行命令</p>
+<p><code>jekyll build</code></p>
+</li>
+</ol>
+<p><img src="https://i0.hdslb.com/bfs/article/02db465212d3c374a43c60fa2625cc1caeaab796.png" alt></p>
+<p>添加评论系统，推荐使用 <strong>来必力 （<a href="https://livere.com/）" target="_blank" rel="noopener">https://livere.com/）</a></strong></p>
+<p><img src="https://i0.hdslb.com/bfs/article/4adb9255ada5b97061e610b682b8636764fe50ed.png" alt></p>
+<h1 id="Mkdocs"><a href="#Mkdocs" class="headerlink" title="Mkdocs"></a><strong>Mkdocs</strong></h1><p><strong>新建博客</strong></p>
+<p><strong>mkdocs new sitename</strong></p>
+<p><strong>开启服务</strong></p>
+<p><strong>mkdocs  serve</strong></p>
+<p><strong>生成</strong></p>
+<p><strong>mkdocs  build</strong></p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<p>旧版中 ，分页 是 pages （现在改为 nav ）,这一点请注意</p>
+<p>nav:</p>
+<pre><code>- Home: index.md
+
+- About: about.md
+</code></pre><p><img src="https://i0.hdslb.com/bfs/article/4adb9255ada5b97061e610b682b8636764fe50ed.png" alt></p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a><strong>Hexo</strong></h1><p><strong>这个推荐看  up主：极客船  </strong></p>
+<p><strong>便携版**</strong>Hexo使用教程**</p>
+<p><strong>（<a href="https://portablehexo.bitmoe.cn/）" target="_blank" rel="noopener">https://portablehexo.bitmoe.cn/）</a></strong></p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<p>相关网址：</p>
+<h1 id="http-tinyambition-com-h2m-HTML转MD"><a href="#http-tinyambition-com-h2m-HTML转MD" class="headerlink" title="http://tinyambition.com/h2m/       HTML转MD"></a><strong><a href="http://tinyambition.com/h2m/" target="_blank" rel="noopener">http://tinyambition.com/h2m/</a>       HTML转MD</strong></h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/09/搭建个人博客的几种方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-酷我音乐MP3链获取方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/08/酷我音乐MP3链获取方法/">酷我音乐MP3链获取方法</a>
+    </h1>
+  
+
+		
+        
+        <a href="/2019/03/08/酷我音乐MP3链获取方法/" class="archive-article-date">
+  	<time datetime="2019-03-08T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一步：打开酷我</p>
+<p><a href="http://www.kuwo.cn/" target="_blank" rel="noopener">http://www.kuwo.cn/</a></p>
+<p>第二步</p>
+<p>在输入框查找，要搜的音乐</p>
+<p><img src="https://i0.hdslb.com/bfs/article/3f20886ef3abf77f0061c555e13c51802f7e7f53.png@740w_292h.webp" alt></p>
+<p>第三步：点击分享（个人推荐，分享到QQ空间）</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c3c7427eabf957f25d715c2e913b11af46a93063.png@1320w_642h.webp" alt></p>
+<p><img src="https://i0.hdslb.com/bfs/article/c955c96c06288a275e0163db1a9685b3cea2a4ca.png@1114w_784h.webp" alt></p>
+<p>图中红框中为：歌曲ID</p>
+<p>第四步：复制下来 歌曲ID</p>
+<p>第五步：<a href="http://player.kuwo.cn/webmusic/st/getNewMuiseByRid?rid=MUSIC" target="_blank" rel="noopener">http://player.kuwo.cn/webmusic/st/getNewMuiseByRid?rid=MUSIC</a>_ </p>
+<pre><code>在上面这段末尾，加上 **歌曲ID**
+</code></pre><p><strong>即：<a href="http://player.kuwo.cn/webmusic/st/getNewMuiseByRid?rid=MUSIC" target="_blank" rel="noopener">http://player.kuwo.cn/webmusic/st/getNewMuiseByRid?rid=MUSIC</a>_ 45831935</strong></p>
+<p><strong>用浏览器打开这个网址</strong></p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<p><img src="https://i0.hdslb.com/bfs/article/f16f5c329d8bb8dc6a66e84ad55aef4eebec6f54.png@1320w_752h.webp" alt></p>
+<p>此图为本文重点</p>
+<p>本文原方法过于老旧，图片全部失效，下面的操作是本人摸索出来的，敲重点！！！</p>
+<p>第六步：上图，红框为<strong> 歌曲基本信息</strong>（没卵用）</p>
+<h1 id="上图绿框部分为-重点"><a href="#上图绿框部分为-重点" class="headerlink" title="上图绿框部分为 重点"></a>上图绿框部分为 <strong>重点</strong></h1><p><strong>公式是这样的：（http://）+ （<mp3dl>rm01.sycdn.kuwo.cn</mp3dl>标签中的一部分）+（/resource/）+（<mp3path>n2/38/14/2253700305.mp3</mp3path>）</strong> </p>
+<p><strong>注意：只要 </strong><mp3dl>标签里的部分，作为前缀<em>**</em></mp3dl></p>
+<p><strong><strong>综上：完整链接为</strong></strong></p>
+<p><strong><strong><a href="http://rm01.sycdn.kuwo.cn/resource/n2/38/14/2253700305.mp3" target="_blank" rel="noopener">http://rm01.sycdn.kuwo.cn/resource/n2/38/14/2253700305.mp3</a></strong></strong></p>
+<p><strong><strong>大家可以试听一下  （这是《陷入纯情》的插曲，这部韩剧非常好看，强烈推荐）</strong></strong></p>
+<p><strong><strong>以上</strong></strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/08/酷我音乐MP3链获取方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-几个深度学习项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/03/几个深度学习项目/">几个深度学习项目</a>
+    </h1>
+  
+
+		
+        
+        <a href="/2019/03/03/几个深度学习项目/" class="archive-article-date">
+  	<time datetime="2019-03-03T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-黑白照片-视频自动上色"><a href="#1-黑白照片-视频自动上色" class="headerlink" title="1.黑白照片/视频自动上色"></a>1.黑白照片/视频自动上色</h1><p>这是运用深度学习网络学习自然存在于照片中的某些模式——比如，天通常是蓝的，云是白的或者灰的，草是绿的。通过这类规则，Let there be color！不需要人类的介入就能对照片进行重新上色。虽然有时它也会犯错，但这种错误很难被发现。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/9fe086fec64c8f3041a63ef075e97a9f7927de5d.png@1320w_510h.webp" alt></p>
+<p>手部还原</p>
+<p>在线测试：<a href="http://hi.cs.waseda.ac.jp:8082/" target="_blank" rel="noopener">http://hi.cs.waseda.ac.jp:8082/</a></p>
+<p>论文：<a href="http://hi.cs.waseda.ac.jp/~iizuka/projects/colorization/data/colorization_sig2016.pdf" target="_blank" rel="noopener">http://hi.cs.waseda.ac.jp/~iizuka/projects/colorization/data/colorization_sig2016.pdf</a></p>
+<p>github:<a href="https://github.com/satoshiiizuka/siggraph2016_colorization" target="_blank" rel="noopener">https://github.com/satoshiiizuka/siggraph2016_colorization</a></p>
+<p><img src="https://i0.hdslb.com/bfs/article/248322a86c186e1e13f1843c46717a7b70da2089.png@1320w_520h.webp" alt></p>
+<p>模型</p>
+<h1 id="2-Neural-Talk：描述照片"><a href="#2-Neural-Talk：描述照片" class="headerlink" title="2.Neural Talk：描述照片"></a>2.Neural Talk：描述照片</h1><p>用电脑来对照片进行自动分类已经很常见了。比如，Facebook能在分享的照片里标记出你的好友，Google可以为你的照片打上标签以便更有效率地进行搜索。</p>
+<p>demo:　<a href="http://cs.stanford.edu/people/karpathy/deepimagesent/generationdemo/" target="_blank" rel="noopener">http://cs.stanford.edu/people/karpathy/deepimagesent/generationdemo/</a></p>
+<p>论文：　<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf" target="_blank" rel="noopener">http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf</a></p>
+<p>github：<a href="https://github.com/karpathy/neuraltalk" target="_blank" rel="noopener">https://github.com/karpathy/neuraltalk</a></p>
+<p><img src="https://i0.hdslb.com/bfs/article/849d232d0cd399a21f1c4fd3a1e761928b370e68.png@1048w_712h.webp" alt></p>
+<p>酷</p>
+<h1 id="3-线稿自动上色"><a href="#3-线稿自动上色" class="headerlink" title="3.线稿自动上色"></a>3.线稿自动上色</h1><p><strong>style2paints 2.0</strong></p>
+<p><strong><a href="http://paintstransfer.com/" target="_blank" rel="noopener">http://paintstransfer.com/</a></strong></p>
+<p>github:<a href="https://github.com/lllyasviel/style2paints" target="_blank" rel="noopener">https://github.com/lllyasviel/style2paints</a></p>
+<p>论文：<a href="https://arxiv.org/abs/1706.03319" target="_blank" rel="noopener">https://arxiv.org/abs/1706.03319</a></p>
+<p><strong>Paintschainer</strong><br><a href="https://paintschainer.preferred.tech/index_en.html" target="_blank" rel="noopener">https://paintschainer.preferred.tech/index_en.html</a></p>
+<p><strong>Deepcolor</strong><br><a href="https://github.com/kvfrans/deepcolor" target="_blank" rel="noopener">https://github.com/kvfrans/deepcolor</a></p>
+<p><strong>Auto-painter</strong><br><a href="https://arxiv.org/abs/1705.01908" target="_blank" rel="noopener">https://arxiv.org/abs/1705.01908</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/03/几个深度学习项目/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-PE 顶点表情合并 原理分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/02/PE 顶点表情合并 原理分析/">PE 顶点表情合并 原理分析</a>
+    </h1>
+  
+
+		
+        
+        <a href="/2019/03/02/PE 顶点表情合并 原理分析/" class="archive-article-date">
+  	<time datetime="2019-03-02T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>病危患者 的专栏  <a href="https://www.bilibili.com/read/cv730434" target="_blank" rel="noopener">【PE教程】奥义 • 一键换脸</a> </p>
+<p>中有一步，设计到顶点表情合并，我原本想写个一键换脸插件的，看到这一步的时候，就崩溃了。</p>
+<p>下面我来分析一下顶点表情  <strong>“合并“  </strong>的原理</p>
+<p><img src="https://i0.hdslb.com/bfs/article/db75225feabec8d8b64ee7d3c7165cd639554cbc.png" alt></p>
+<p><img src="https://i0.hdslb.com/bfs/article/477355fe5d1990c4bd9bd708329a27d8f3c15535.png@1320w_532h.webp" alt></p>
+<p>材质复制，并关联复制出顶点表情</p>
+<p>材质复制，实际上是面的复制（顶点数会增加，感谢emil的教导）</p>
+<p><img src="https://i0.hdslb.com/bfs/article/a38e5d82a05c335c912b34272cec31b051aa36c6.png@492w_232h.webp" alt></p>
+<p>整容前</p>
+<p><img src="https://i0.hdslb.com/bfs/article/cfbd81de63b1549cec88046778272a003e06e3ea.png@484w_238h.webp" alt></p>
+<p>整容后</p>
+<p>我们来看一下，表情这里</p>
+<p><img src="https://i0.hdslb.com/bfs/article/aaab383c7e0f9c36cbb12996b3866df59c0e8571.png@1320w_440h.webp" alt></p>
+<p>合并あ 和 あ+</p>
+<p>合并！！！！！！！  全都是假的</p>
+<p>合并！！！！！！！  全都是假的</p>
+<p>合并！！！！！！！  全都是假的     （凑字数，嘿嘿嘿~~~）</p>
+<p><img src="https://i0.hdslb.com/bfs/article/4adb9255ada5b97061e610b682b8636764fe50ed.png" alt></p>
+<p>保存为CSV表格，分析一下，合并前后有何不同</p>
+<p>重点！！！！敲黑板！！！！</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c13514af6400b0dc5621ba0c015250ff0f108f97.jpg@1320w_480h.webp" alt></p>
+<p>左为没合并的あ2和 あ2+<br>右为合并后的あ</p>
+<p>我们来看看875,876行</p>
+<p><img src="https://i0.hdslb.com/bfs/article/ee05c873160066ff6f6b412894b86204d00a4e8b.png@1320w_148h.webp" alt></p>
+<p>左图875,876行为あ2+的表头</p>
+<p>我们看看表格的末尾</p>
+<p><img src="https://i0.hdslb.com/bfs/article/56b9a77d1ab610ece1ffa5f9d2dce7e0025e4b20.png@1320w_124h.webp" alt></p>
+<p>嗯！右边少了2行！！！！</p>
+<p>综上分析，表情合并，并不是顶点的合并，顶点数不会减少</p>
+<p>只是一种假象</p>
+<p>实际上，在csv表格的层面上，是删掉了875,876这两行，把876之后的 あ+重命名为あ</p>
+<p>以上</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/02/PE 顶点表情合并 原理分析/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-via" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/01/via/">Via浏览器</a>
+    </h1>
+  
+
+		
+        
+        <a href="/2019/03/01/via/" class="archive-article-date">
+  	<time datetime="2019-03-01T10:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第三方插件：<a href="http://m.via-app.cn/via/" target="_blank" rel="noopener">http://m.via-app.cn/via/</a></p>
+<p><img src="https://i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" alt></p>
+<p><strong>配合ADM</strong></p>
+<p>UA：</p>
+<p>Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/012.002; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.0 Mobile Safari/533.4 3gpp-gba</p>
+<p>VIa浏览器——菜单——设置——通用——浏览器标识——粘贴UA代码 </p>
+<p>ADM下载器——菜单——线程数64——设置——用户代理——自定义——自定义用户代理——粘贴UA代码</p>
+<p><strong>浏览器切换UA</strong></p>
+<p>菜单-工具箱-浏览器标识-自定义</p>
+<p><strong>切换下载设置</strong></p>
+<p>VIa浏览器——菜单——设置——插件——下载管理</p>
+<p><img src="https://i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" alt></p>
+<p>测试链接：</p>
+<p><a href="https://pan.baidu.com/s/1LsGkvXs5nWvHikHZUSSrwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1LsGkvXs5nWvHikHZUSSrwg</a></p>
+<p><img src="https://i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" alt></p>
+<p>私用壁纸：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c57de45f225e5ade15a9966ea307196559fe34b0.png@1320w_2346h.webp" alt></p>
+<p><img src="https://i0.hdslb.com/bfs/article/4aa545dccf7de8d4a93c2b2b8e3265ac0a26d216.png" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">via</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/安卓//" class="article-tag-list-link color3">安卓</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/01/via/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -190,12 +753,12 @@
 
 
 
-        <div id="aplayer-gqgYsvnk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-GbxfWpSI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-gqgYsvnk"),
+            element: document.getElementById("aplayer-GbxfWpSI"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -408,6 +971,34 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">galgame</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">via</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Dokuwiki</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
